@@ -1,0 +1,28 @@
+{
+    "name": "YouTube Adblocker",
+    "version": "1.0",
+    "description": "A simple YouTube ad blocker to enhance your video watching experience by blocking unwanted ads.",
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "content_scripts": [{
+        "js": ["script.js"],
+        "run_at": "document_idle",
+        "matches": ["*://*.youtube.com/*"]
+    }],
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icons/icon16.png",
+            "48": "icons/icon48.png",
+            "128": "icons/icon128.png"
+        }
+    },
+    "manifest_version": 3
+}
